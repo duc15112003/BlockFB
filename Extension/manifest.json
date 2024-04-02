@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Chặn truy cập vào Facebook",
+  "version": "1.0",
+  "permissions": [
+    "webNavigation"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "default_popup": "404.html",
+  "web_accessible_resources": [
+    "404.html"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
